@@ -20,7 +20,7 @@ do
 		echo "0,0" >> run
 		day=${f:4:3}
 		day=$((10#${day}-1))
-		dw=$(date -d "20${year}/01/01+$day days" +%u)
+		dw=$(date -d "20${year}/01/01+$day days" +%w)
 		week=$(date -d "20${year}/01/01+$day days" +%U)
 		week=$((10#${week}+10#${weekzero}))
 		echo "igs${week}${dw}.sp3" >> run
